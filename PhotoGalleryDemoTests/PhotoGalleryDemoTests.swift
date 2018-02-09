@@ -6,8 +6,8 @@
 //  Copyright © 2018年 Eiji Kushida. All rights reserved.
 //
 
-import XCTest
 @testable import PhotoGalleryDemo
+import XCTest
 
 class PhotoGalleryDemoTests: XCTestCase {
     
