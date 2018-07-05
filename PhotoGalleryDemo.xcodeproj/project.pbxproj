@@ -13,6 +13,10 @@
 		C549F7F92026682D00F2E21A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C549F7F82026682D00F2E21A /* Assets.xcassets */; };
 		C549F7FC2026682D00F2E21A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C549F7FA2026682D00F2E21A /* LaunchScreen.storyboard */; };
 		C549F8072026682D00F2E21A /* PhotoGalleryDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549F8062026682D00F2E21A /* PhotoGalleryDemoTests.swift */; };
+		C549F814202669A000F2E21A /* PhotoGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549F813202669A000F2E21A /* PhotoGalleryCell.swift */; };
+		C549F81720266AA100F2E21A /* PhotoGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549F81620266AA100F2E21A /* PhotoGallery.swift */; };
+		C549F81A20266CF900F2E21A /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549F81920266CF900F2E21A /* PhotoGalleryViewModel.swift */; };
+		C549F81C202671C800F2E21A /* PhotoGalleryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549F81B202671C800F2E21A /* PhotoGalleryProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		C549F8022026682D00F2E21A /* PhotoGalleryDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGalleryDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C549F8062026682D00F2E21A /* PhotoGalleryDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryDemoTests.swift; sourceTree = "<group>"; };
 		C549F8082026682D00F2E21A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C549F813202669A000F2E21A /* PhotoGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCell.swift; sourceTree = "<group>"; };
+		C549F81620266AA100F2E21A /* PhotoGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGallery.swift; sourceTree = "<group>"; };
+		C549F81920266CF900F2E21A /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
+		C549F81B202671C800F2E21A /* PhotoGalleryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				C549F7F12026682D00F2E21A /* AppDelegate.swift */,
-				C549F7F32026682D00F2E21A /* ViewController.swift */,
-				C549F7F52026682D00F2E21A /* Main.storyboard */,
 				C549F7F82026682D00F2E21A /* Assets.xcassets */,
-				C549F7FA2026682D00F2E21A /* LaunchScreen.storyboard */,
 				C549F7FD2026682D00F2E21A /* Info.plist */,
+				C549F81520266A8F00F2E21A /* Models */,
+				C549F8112026696F00F2E21A /* ViewControllers */,
+				C549F81820266CE300F2E21A /* ViewModels */,
+				C549F8122026698100F2E21A /* Views */,
 			);
 			path = PhotoGalleryDemo;
 			sourceTree = "<group>";
@@ -96,6 +105,41 @@
 			path = PhotoGalleryDemoTests;
 			sourceTree = "<group>";
 		};
+		C549F8112026696F00F2E21A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C549F7FA2026682D00F2E21A /* LaunchScreen.storyboard */,
+				C549F7F52026682D00F2E21A /* Main.storyboard */,
+				C549F7F32026682D00F2E21A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C549F8122026698100F2E21A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C549F813202669A000F2E21A /* PhotoGalleryCell.swift */,
+				C549F81B202671C800F2E21A /* PhotoGalleryProvider.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C549F81520266A8F00F2E21A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C549F81620266AA100F2E21A /* PhotoGallery.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C549F81820266CE300F2E21A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C549F81920266CF900F2E21A /* PhotoGalleryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +150,7 @@
 				C549F7EA2026682D00F2E21A /* Sources */,
 				C549F7EB2026682D00F2E21A /* Frameworks */,
 				C549F7EC2026682D00F2E21A /* Resources */,
+				C549F829202D9AE000F2E21A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -194,13 +239,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C549F829202D9AE000F2E21A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C549F7EA2026682D00F2E21A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C549F81C202671C800F2E21A /* PhotoGalleryProvider.swift in Sources */,
+				C549F814202669A000F2E21A /* PhotoGalleryCell.swift in Sources */,
 				C549F7F42026682D00F2E21A /* ViewController.swift in Sources */,
+				C549F81A20266CF900F2E21A /* PhotoGalleryViewModel.swift in Sources */,
 				C549F7F22026682D00F2E21A /* AppDelegate.swift in Sources */,
+				C549F81720266AA100F2E21A /* PhotoGallery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +419,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UE5DCQPTRB;
 				INFOPLIST_FILE = PhotoGalleryDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.PhotoGalleryDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,7 +435,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UE5DCQPTRB;
 				INFOPLIST_FILE = PhotoGalleryDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.PhotoGalleryDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
